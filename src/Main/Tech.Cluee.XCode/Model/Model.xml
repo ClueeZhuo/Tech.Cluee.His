@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Tables xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com http://www.newlifex.com/Model2020.xsd" NameSpace="Tech.Cluee.XCode.Module" ConnName="SmartEdu" Output="Entity" BaseClass="Entity" xmlns="http://www.newlifex.com/Model2020.xsd">
+  <Table Name="School" Description="学校信息" DbType="SqlServer">
+    <Columns>
+      <Column Name="Id" DataType="Int64" Identity="True" PrimaryKey="True" Description="自增主键" />
+      <Column Name="Code" DataType="String" Master="True" Length="256" Nullable="False" Description="学校编号" />
+      <Column Name="Name" DataType="String" Master="True" Length="256" Nullable="False" Description="学校名称" />
+      <Column Name="IsDelete" DataType="Boolean" Description="是否删除" />
+    </Columns>
+  </Table>
+  <Table Name="Student" Description="学生信息" DbType="SqlServer">
+    <Columns>
+      <Column Name="Id" DataType="Int64" Identity="True" PrimaryKey="True" Description="自增主键" />
+      <Column Name="FirstName" DataType="String" Length="256" Nullable="False" Description="名" />
+      <Column Name="LastName" DataType="String" Length="256" Nullable="False" Description="姓" />
+      <Column Name="Age" DataType="Int32" Description="年龄" />
+      <Column Name="IdCard" DataType="String" Length="256" Nullable="False" Description="身份证" />
+      <Column Name="Balance" DataType="Decimal" RawType="decimal(18, 4)" Scale="4" Description="余额" />
+    </Columns>
+  </Table>
+</Tables>

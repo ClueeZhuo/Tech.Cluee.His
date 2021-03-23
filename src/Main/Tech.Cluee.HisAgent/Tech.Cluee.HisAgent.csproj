@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AppendTargetFrameworkToOutputPath>HisAgent</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\Bin\HisAgent\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NewLife.AntJob" Version="2.3.2021.308" />
+    <PackageReference Include="NewLife.AntJob.Extensions" Version="2.3.2021.308" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\App\Tech.Cluee.HisData\Tech.Cluee.HisData.csproj" />
+  </ItemGroup>
+
+</Project>
