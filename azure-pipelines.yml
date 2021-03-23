@@ -3,7 +3,7 @@ pool:
 
 variables:
   tagName: 'latest'
-  imageName: '$(dockerId)/blazor:$(Build.BuildNumber)'
+  imageName: '$(dockerId)/hisweb:$(Build.BuildNumber)'
 
 steps:
 
@@ -38,9 +38,9 @@ steps:
       echo 'success to pull image...'
      fi
 
-     containers=$(docker ps -q --filter name=blazor)
+     containers=$(docker ps -q --filter name=hisweb)
      if test -n "$containers"; then
-      docker stop $(docker ps -q --filter name=blazor)
+      docker stop $(docker ps -q --filter name=hisweb)
       rc=$?
       if [[ $rc != 0 ]];
       then
@@ -53,9 +53,9 @@ steps:
       echo 'none to stop container...'
      fi
      
-     containers1=$(docker ps -q -a --filter name=blazor)
+     containers1=$(docker ps -q -a --filter name=hisweb)
      if test -n "$containers1"; then
-      docker rm $(docker ps -q -a --filter name=blazor)
+      docker rm $(docker ps -q -a --filter name=hisweb)
       rc=$?
       if [[ $rc != 0 ]];
       then
@@ -68,7 +68,7 @@ steps:
       echo 'none to remove container...'
      fi
 
-     docker run -d -p 8080:80 --name blazor --mount source=blazor_data,target=/app/log --restart=unless-stopped $(imageName)
+     docker run -d -p 10102:80 --name hisweb --mount source=antjobweb_config,target=/app/Config --mount source=antjobweb_data,target=/app/Data --mount source=antjobweb_log,target=/app/Log --restart=unless-stopped $(imageName)
      rc=$?
      if [[ $rc != 0 ]];
      then
@@ -93,9 +93,9 @@ steps:
       echo 'none to remove danglings images...'
      fi
 
-     oldimages=$(docker images clueezhuo/blazor -f "before=$(imageName)" -q)
+     oldimages=$(docker images clueezhuo/hisweb -f "before=$(imageName)" -q)
      if test -n "$oldimages"; then
-      docker rmi $(docker images clueezhuo/blazor -f "before=$(imageName)" -q)
+      docker rmi $(docker images clueezhuo/hisweb -f "before=$(imageName)" -q)
       rc=$?
       if [[ $rc != 0 ]];
       then
