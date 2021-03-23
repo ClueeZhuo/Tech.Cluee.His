@@ -68,7 +68,7 @@ steps:
       echo 'none to remove container...'
      fi
 
-     docker run -d -p 10102:80 --name hisweb --mount source=antjobweb_config,target=/app/Config --mount source=antjobweb_data,target=/app/Data --mount source=antjobweb_log,target=/app/Log --restart=unless-stopped $(imageName)
+     docker run -d -p 10102:80 --name hisweb --mount source=antweb_config,target=/app/Config --mount source=antweb_data,target=/app/Data --mount source=antweb_log,target=/app/Log --restart=unless-stopped $(imageName)
      rc=$?
      if [[ $rc != 0 ]];
      then
