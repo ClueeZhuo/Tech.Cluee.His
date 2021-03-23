@@ -11,7 +11,7 @@ namespace Tech.Cluee.HisWeb.Areas.School.Model
     [Serializable]
     [DataObject]
     [Description("交易")]
-    [BindTable("Trade", Description = "交易", ConnName = "Bill", DbType = DatabaseType.SQLite)]
+    [BindTable("Trade", Description = "交易", ConnName = "Bill", DbType = DatabaseType.None)]
     public partial class Trade
     {
         #region 属性

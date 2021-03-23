@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 
 using XCode;
+using XCode.Cache;
 using XCode.Membership;
 
 namespace Tech.Cluee.HisData.Model

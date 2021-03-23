@@ -6,7 +6,6 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <AppendTargetFrameworkToOutputPath>HisWeb</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\..\Bin\HisWeb\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,22 +14,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\App\Tech.Cluee.HisData\Tech.Cluee.HisData.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Areas\School\Model\Build.log">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Build.tt</DependentUpon>
-    </None>
-    <None Update="Areas\School\Model\Build.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Build.log</LastGenOutput>
-    </None>
+    <ProjectReference Include="..\..\App\Tech.Cluee.SchoolData\Tech.Cluee.SchoolData.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

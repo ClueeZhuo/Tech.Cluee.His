@@ -13,7 +13,7 @@ namespace Tech.Cluee.HisWeb.Areas.School.Model
     [DataObject]
     [Description("学生")]
     [BindIndex("IX_Student_ClassID", false, "ClassID")]
-    [BindTable("Student", Description = "学生", ConnName = "School", DbType = DatabaseType.SQLite)]
+    [BindTable("Student", Description = "学生", ConnName = "School", DbType = DatabaseType.None)]
     public partial class Student
     {
         #region 属性

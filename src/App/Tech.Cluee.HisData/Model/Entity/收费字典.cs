@@ -12,7 +12,7 @@ namespace Tech.Cluee.HisData.Model
     [DataObject]
     [Description("收费字典")]
     [BindIndex("IU_ZDSF_BM", true, "BM")]
-    [BindTable("ZDSF", Description = "收费字典", ConnName = "His", DbType = DatabaseType.SQLite)]
+    [BindTable("ZDSF", Description = "收费字典", ConnName = "His", DbType = DatabaseType.None)]
     public partial class ZDSF
     {
         #region 属性

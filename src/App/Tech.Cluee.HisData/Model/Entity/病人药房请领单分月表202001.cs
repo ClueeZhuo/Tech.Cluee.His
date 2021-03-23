@@ -12,7 +12,7 @@ namespace Tech.Cluee.HisData.Model
     [DataObject]
     [Description("病人药房请领单分月表202001")]
     [BindIndex("IX_ZYYFQLD_BHID", false, "BHID")]
-    [BindTable("ZYYFQLD", Description = "病人药房请领单分月表202001", ConnName = "His", DbType = DatabaseType.SQLite)]
+    [BindTable("ZYYFQLD", Description = "病人药房请领单分月表202001", ConnName = "His", DbType = DatabaseType.None)]
     public partial class ZYYFQLD
     {
         #region 属性

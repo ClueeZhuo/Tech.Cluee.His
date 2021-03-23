@@ -11,7 +11,7 @@ namespace Tech.Cluee.HisWeb.Areas.School.Model
     [Serializable]
     [DataObject]
     [Description("班级")]
-    [BindTable("Class", Description = "班级", ConnName = "School", DbType = DatabaseType.SQLite)]
+    [BindTable("Class", Description = "班级", ConnName = "School", DbType = DatabaseType.None)]
     public partial class Class
     {
         #region 属性

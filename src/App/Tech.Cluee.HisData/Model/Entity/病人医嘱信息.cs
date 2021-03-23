@@ -13,7 +13,7 @@ namespace Tech.Cluee.HisData.Model
     [Description("病人医嘱信息")]
     [BindIndex("IU_ZYBHYZ0_BHID_MGROUPID", true, "BHID,MGROUPID")]
     [BindIndex("IX_ZYBHYZ0_BHID", false, "BHID")]
-    [BindTable("ZYBHYZ0", Description = "病人医嘱信息", ConnName = "His", DbType = DatabaseType.SQLite)]
+    [BindTable("ZYBHYZ0", Description = "病人医嘱信息", ConnName = "His", DbType = DatabaseType.None)]
     public partial class ZYBHYZ0
     {
         #region 属性

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Tables xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com http://www.newlifex.com/Model2020.xsd" NameSpace="Tech.Cluee.HisData.Model" ConnName="His" Output="Entity" BaseClass="Entity" xmlns="http://www.newlifex.com/Model2020.xsd">
-  <Table Name="ZYBH0" Description="病人基本信息" DbType="SQLite" IgnoreNameCase="False" ChineseFileName="False">
+  <Table Name="ZYBH0" Description="病人基本信息" IgnoreNameCase="False" ChineseFileName="False">
     <Columns>
       <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
       <Column Name="Bhid" DataType="Int32" Master="True" Description="病人ID" />
@@ -26,7 +26,7 @@
       <Index Columns="CreateTime" />
     </Indexes>
   </Table>
-  <Table Name="ZYBHYZ0" Description="病人医嘱信息" DbType="SQLite" IgnoreNameCase="False">
+  <Table Name="ZYBHYZ0" Description="病人医嘱信息" IgnoreNameCase="False">
     <Columns>
       <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
       <Column Name="Bhid" DataType="Int32" Description="病人ID" />
@@ -49,7 +49,7 @@
       <Index Columns="BHID" />
     </Indexes>
   </Table>
-  <Table Name="ZYBHYZ1" Description="病人医嘱明细信息" DbType="SQLite" IgnoreNameCase="False">
+  <Table Name="ZYBHYZ1" Description="病人医嘱明细信息" IgnoreNameCase="False">
     <Columns>
       <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
       <Column Name="Dgroupid" DataType="Int32" Master="True" Description="医嘱组号" />
@@ -73,7 +73,7 @@
       <Index Columns="DGROUPID" />
     </Indexes>
   </Table>
-  <Table Name="ZYYFQLD" Description="病人药房请领单分月表202001" DbType="SQLite" IgnoreNameCase="False">
+  <Table Name="ZYYFQLD" Description="病人药房请领单分月表202001" IgnoreNameCase="False">
     <Columns>
       <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
       <Column Name="Qlrq" DataType="Int32" Description="请领日期" />
@@ -101,7 +101,7 @@
       <Index Columns="BHID" />
     </Indexes>
   </Table>
-  <Table Name="ZDSF" Description="收费字典" DbType="SQLite" IgnoreNameCase="False">
+  <Table Name="ZDSF" Description="收费字典" IgnoreNameCase="False">
     <Columns>
       <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
       <Column Name="BM" DataType="String" Master="True" Nullable="False" Description="编码" />

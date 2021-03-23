@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Tables xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://www.newlifex.com http://www.newlifex.com/Model2020.xsd" Output="Entity" NameSpace="Tech.Cluee.HisWeb.Areas.School.Model" ConnName="School" BaseClass="Entity" xmlns="http://www.newlifex.com/Model2020.xsd">
-  <Table Name="Class" Description="班级" DbType="SQLite">
+  <Table Name="Class" Description="班级">
     <Columns>
       <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
       <Column Name="Name" DataType="String" Master="True" Description="名称" />
@@ -15,7 +15,7 @@
       <Column Name="Remark" DataType="String" Length="200" Description="备注" />
     </Columns>
   </Table>
-  <Table Name="Student" Description="学生" DbType="SQLite">
+  <Table Name="Student" Description="学生">
     <Columns>
       <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
       <Column Name="ClassID" DataType="Int32" Description="班级" />
@@ -37,7 +37,7 @@
       <Index Columns="ClassID" />
     </Indexes>
   </Table>
-  <Table Name="Trade" Description="交易" ConnName="Bill" DbType="SQLite">
+  <Table Name="Trade" Description="交易" ConnName="Bill">
     <Columns>
       <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="订单编号" />
       <Column Name="NodeID" DataType="Int32" Description="节点号" />
