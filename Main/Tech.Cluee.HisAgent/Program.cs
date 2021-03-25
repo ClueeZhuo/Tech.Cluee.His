@@ -32,6 +32,7 @@ namespace Tech.Cluee.HisAgent
             //2.添加作业处理器
             scr.Handlers.Add(new HelloJob());
             scr.Handlers.Add(new BuildPatientJob());
+            scr.Handlers.Add(new BuildWillJob());
 
             //3.启动调度引擎，调度内部多线程处理
             scr.Start();

@@ -16,7 +16,7 @@ namespace Tech.Cluee.HisAgent
         public BuildPatientJob()
         {
             AntJob.Data.IJob job = Job;
-            job.Start = DateTime.Today;
+            job.Start = DateTime.Now.AddMinutes(-10);
             job.Step = 15;
         }
 

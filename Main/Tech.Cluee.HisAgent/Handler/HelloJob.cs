@@ -9,8 +9,8 @@ namespace Tech.Cluee.HisAgent
         public HelloJob()
         {
             AntJob.Data.IJob job = Job;
-            job.Start = DateTime.Today;
-            job.Step = 10;
+            job.Start = DateTime.Now.AddMinutes(-10);
+            job.Step = 5;
         }
 
         protected override int Execute(JobContext ctx)

@@ -15,7 +15,7 @@ namespace Tech.Cluee.HisAgent
         public BuildWillJob()
         {
             AntJob.Data.IJob job = Job;
-            job.Start = DateTime.Today;
+            job.Start = DateTime.Now.AddMinutes(-10);
             job.Step = 30;
         }
 
